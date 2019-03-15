@@ -1,0 +1,129 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 480104 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=15652, tid=0x00000000000049f0
+#
+# JRE version:  (8.0_201-b09) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.201-b09 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000259d800):  JavaThread "Unknown thread" [_thread_in_vm, id=18928, stack(0x00000000023c0000,0x00000000024c0000)]
+
+Stack: [0x00000000023c0000,0x00000000024c0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000259d800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=18928, stack(0x00000000023c0000,0x00000000024c0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000000a1400000, size: 1516 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6b5df0000 - 0x00007ff6b5e27000 	C:\Program Files\Java\jre1.8.0_201\bin\javaw.exe
+0x00007ffe81940000 - 0x00007ffe81b21000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe7f0c0000 - 0x00007ffe7f172000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe7ea00000 - 0x00007ffe7ec73000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe81300000 - 0x00007ffe813a1000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe81740000 - 0x00007ffe817de000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe7f060000 - 0x00007ffe7f0bb000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe817e0000 - 0x00007ffe81904000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe7f230000 - 0x00007ffe7f3c0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe7dd60000 - 0x00007ffe7dd80000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe80c50000 - 0x00007ffe80c78000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe7dd80000 - 0x00007ffe7df12000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe7ed30000 - 0x00007ffe7edcf000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe7e900000 - 0x00007ffe7e9fa000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe6bcc0000 - 0x00007ffe6bf29000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.590_none_fb3d9bff3069e088\COMCTL32.dll
+0x00007ffe80fd0000 - 0x00007ffe812f2000 	C:\WINDOWS\System32\combase.dll
+0x00007ffe7df20000 - 0x00007ffe7df9a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe81480000 - 0x00007ffe814ad000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000054950000 - 0x0000000054a21000 	C:\Program Files\Java\jre1.8.0_201\bin\msvcr100.dll
+0x00000000540a0000 - 0x0000000054944000 	C:\Program Files\Java\jre1.8.0_201\bin\server\jvm.dll
+0x00007ffe7ee30000 - 0x00007ffe7ee38000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe78c50000 - 0x00007ffe78c59000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe80f60000 - 0x00007ffe80fcc000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe77890000 - 0x00007ffe778b3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe75310000 - 0x00007ffe7531a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe77860000 - 0x00007ffe7788a000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffe7dd10000 - 0x00007ffe7dd59000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffe70780000 - 0x00007ffe7078f000 	C:\Program Files\Java\jre1.8.0_201\bin\verify.dll
+0x00007ffe69f50000 - 0x00007ffe69f79000 	C:\Program Files\Java\jre1.8.0_201\bin\java.dll
+0x00007ffe69f30000 - 0x00007ffe69f46000 	C:\Program Files\Java\jre1.8.0_201\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: ATM.ATMapp
+java_class_path (initial): C:\Users\PC\eclipse-workspace\Simple ATM\bin;C:\Users\PC\.p2\pool\plugins\org.eclipse.fx.ide.css.jfx8_3.4.1.201810030906.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jdk-11.0.2/bin/server;C:/Program Files/Java/jdk-11.0.2/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-11.0.2\bin;C:\Users\PC\Desktop;
+USERNAME=PC
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.556)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 6201708k(1337048k free), swap 19059560k(5560k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.201-b09) for windows-amd64 JRE (1.8.0_201-b09), built on Dec 15 2018 18:36:39 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Thu Mar 14 21:29:37 2019
+timezone: Egypt Standard Time
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
